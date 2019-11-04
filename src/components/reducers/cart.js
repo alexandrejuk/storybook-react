@@ -57,6 +57,47 @@ const initialState = {
         price: 90,
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
       },
+      {
+        id: 7,
+        title: 'White',
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+        price: 260,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
+      },
+      {
+        id: 8,
+        title: 'Cropped-sho',
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+        price: 160,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
+      },
+      {
+        id: 9,
+        title: 'Blues',
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+        price: 90,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
+      },     {
+        id: 10,
+        title: 'White',
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+        price: 260,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
+      },
+      {
+        id: 11,
+        title: 'Cropped-sho',
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+        price: 160,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
+      },
+      {
+        id: 12,
+        title: 'Blues',
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+        price: 90,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
+      },
   ],
   addedItems:[],
 }
@@ -102,7 +143,7 @@ const cartReducer= (state = initialState, action) => {
         }
         return {
           ...state,
-          addedItems:  addedItems.map(item => {
+          addedItems: addedItems.map(item => {
             if (item.id === decrementItemFound.id) return decrementItem(decrementItemFound)
             return item
           })

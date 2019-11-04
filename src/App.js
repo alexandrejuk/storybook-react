@@ -2,11 +2,13 @@ import React, { Fragment } from 'react'
 import {
   Switch,
   Route,
+  Redirect
 } from 'react-router-dom'
 
 import { NavBar } from './components'
 import Products from './pages/Products'
 import Checkout from './pages/Checkout'
+import Payment from './pages/Payment'
 import './style.css'
 
 const App = () => {
@@ -16,13 +18,19 @@ const App = () => {
       <div className="contentMain">
         <Switch>
           <Route
-            path="/products"
+            path="/"
             component={Products}
+            exact
           />
           <Route
             path="/checkout"
             component={Checkout}
           />
+          <Route
+            path="/payment"
+            component={Payment}
+          />
+          <Redirect to="/" />
         </Switch>
       </div>
     </Fragment>

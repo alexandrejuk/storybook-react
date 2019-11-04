@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import { withRouter } from 'react-router-dom'
 import {
   Button,
   List,
@@ -39,12 +38,12 @@ const Checkout = ({
           <h4>R$ {totalAmount(addedItems) + shipping }</h4>
         </div>
         <div>
-          <a href="/#/products">
+          <a href="/#/">
             Comprar mais produtos
           </a>
           <Button
             classStyle="btnPrimary"
-            onClick={() => history.push('products')}
+            onClick={() => history.push('payment')}
           >
             FINALIZAR PEDIDO
           </Button>
@@ -54,4 +53,4 @@ const Checkout = ({
   </Fragment>
 )
 
-export default withRouter(Checkout)
+export default Checkout

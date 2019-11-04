@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
 import {
   addItemToCard,
@@ -13,12 +14,14 @@ const Checkout = ({
   addCartItem,
   decrementCartItem,
   removeCartItem,
+  history,
 }) => {
   return (
     <CheckoutContainer
       addedItems={addedItems}
       addCartItem={addCartItem}
       decrementCartItem={decrementCartItem}
+      history={history}
       removeCartItem={removeCartItem}
     />
   )
@@ -39,4 +42,4 @@ const mapDispatchToProps= (dispatch)=>{
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Checkout)
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Checkout))

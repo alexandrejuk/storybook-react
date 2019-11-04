@@ -16,7 +16,6 @@ const Products = ({
   )
 }
 
-
 const mapStateToProps = (state)=>{
   const { items } = state
   return {
