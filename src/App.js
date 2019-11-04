@@ -9,6 +9,8 @@ import { NavBar } from './components'
 import Products from './pages/Products'
 import Checkout from './pages/Checkout'
 import Payment from './pages/Payment'
+import Login from './pages/Login'
+
 import './style.css'
 
 const App = () => {
@@ -29,6 +31,10 @@ const App = () => {
           <Route
             path="/payment"
             component={Payment}
+          />
+          <Route
+            path="/login"
+            component={Login}
           />
           <Redirect to="/" />
         </Switch>

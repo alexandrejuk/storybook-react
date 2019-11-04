@@ -11,11 +11,13 @@ const NavBar = ({
   <Fragment>
     <div class="navbar">
       <div class="nav-wrapper">
-        <div class="logo">
-          <img 
-            src="http://i2.wp.com/perfilwe.com.br/wp-content/uploads/2017/04/Saraiva-cupom.png?fit=700%2C309" alt=""
-          />
-        </div>
+        <Link to="/">
+          <div class="logo">
+            <img 
+              src="http://i2.wp.com/perfilwe.com.br/wp-content/uploads/2017/04/Saraiva-cupom.png?fit=700%2C309" alt=""
+            />
+          </div>
+        </Link>
         <Link to="/checkout">
           <div
             className="cardIconWrapper"
