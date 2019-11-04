@@ -1,0 +1,52 @@
+.contentMain {
+  max-width: 1358px;
+  margin: 10px auto;
+  overflow-x: hidden;
+}
+.navbar {
+  background: #fece02;
+  width: 100vw;
+  height: 68px;
+}
+.nav-wrapper {
+  background: #fece02;
+  max-width: 1358px;
+  margin: auto;
+}
+
+.logo {
+  height: 68px;
+  width: auto;
+}
+
+.logo > img {
+  height: 100%;
+  width: auto;
+}
+
+.nav-white {
+  background: #ffffff;
+  border-radius: 1px solid #efefef;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  background: #ffffff;
+}
+
+li {
+  padding: 25px;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  border-bottom: 1px solid #000;
+}

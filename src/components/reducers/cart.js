@@ -15,37 +15,43 @@ const initialState = {
         id: 1,
         title: 'Winter body',
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-        price: 110
+        price: 110,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
       },
       {
         id: 2,
         title: 'Adidas',
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-        price: 80
+        price: 80,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
       },
       {
         id: 3,
         title: 'Vans',
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-        price: 120
+        price: 120,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
       },
       {
         id: 4,
         title: 'White',
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-        price: 260
+        price: 260,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
       },
       {
         id: 5,
         title: 'Cropped-sho',
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-        price: 160
+        price: 160,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
       },
       {
         id: 6,
         title: 'Blues',
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
-        price: 90
+        price: 90,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyo060DJa5qRVPUWYmRUHY8T4XLCXawQdTL8_OAS8FkiVAI2Xr',
       },
   ],
   addedItems:[],

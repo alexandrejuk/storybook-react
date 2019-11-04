@@ -1,0 +1,14 @@
+.btnDefault {
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.btnDefault:hover {
+  background: #fece02;
+  border-color: #fece02;
+}

@@ -1,0 +1,31 @@
+.card {
+  max-width: 260px;
+  min-width: 260px;
+  height: 460px;
+  background: #fff;
+  padding: 16px;
+  font-family: arial;
+  margin: 1px;
+}
+.card > h3 {
+  margin-top: 20px;
+}
+.card > small, .card > p, .card > img {
+  margin-top: 10px;
+  color: #808284;
+}
+
+.card > h2 {
+  margin-top: 25px;
+}
+
+.cardImageWrapper {
+  height: 221px;
+  width: 171px;
+  margin: auto;
+  overflow: hidden;
+}
+.cardImage {
+  width: 100%;
+  height: auto;
+}
