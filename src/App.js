@@ -3,9 +3,12 @@ import {
   Switch,
   Route,
 } from 'react-router-dom'
+
 import { NavBar } from './components'
 import Products from './pages/Products'
+import Checkout from './pages/Checkout'
 import './style.css'
+
 const App = () => {
   return (
     <Fragment>
@@ -15,6 +18,10 @@ const App = () => {
           <Route
             path="/products"
             component={Products}
+          />
+          <Route
+            path="/checkout"
+            component={Checkout}
           />
         </Switch>
       </div>

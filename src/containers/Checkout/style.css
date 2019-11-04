@@ -1,0 +1,10 @@
+.checkoutContent {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.checkoutShipping {
+  margin: 0 10px;
+  background: red;
+  width: 100%;
+}

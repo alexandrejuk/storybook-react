@@ -27,6 +27,7 @@ body {
 }
 
 .nav-white {
+  height: 68px;
   background: #ffffff;
   border-radius: 1px solid #efefef;
 }
@@ -42,7 +43,8 @@ ul {
 }
 
 li {
-  padding: 25px;
+  padding: 19px;
+  border-bottom: 1px solid transparent;
 }
 
 li {
@@ -50,7 +52,7 @@ li {
 }
 
 li:hover {
-  border-bottom: 1px solid #000;
+  border-color: #000;
 }
 
 .cardIconWrapper {
@@ -73,16 +75,17 @@ li:hover {
 }
 .cartTotal {
   position: absolute;
-  top: 7px;
-  right: 14px;
-  width: 20px;
-  height: 20px;
+  top: 6px;
+  right: 12px;
+  width: 14px;
+  height: 14px;
   background-color: #24282b;
   border-radius: 50%;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   text-align: center;
+  padding: 4px;
 }

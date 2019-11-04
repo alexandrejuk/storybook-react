@@ -1,6 +1,7 @@
 .contentMain {
-  max-width: 1358px;
+  max-width: calc(1358px - 20px);
   margin: 10px auto;
+  padding: 10px;
   overflow-x: hidden;
 }
 .navbar {

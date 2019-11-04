@@ -5,14 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #EFEFEF;
+  background: #f7f7f7;
   overflow-x: hidden;
   min-height: 100vh;
 }
-p, h1, h2, h3, h5, h6, ul, li {
+p, h1, h2, h3, h4, h5, h6, ul, li {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-weight: normal;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

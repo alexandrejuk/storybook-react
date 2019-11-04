@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import CartIcon from '../../assets/icons/cart.svg'
@@ -15,20 +16,24 @@ const NavBar = ({
             src="http://i2.wp.com/perfilwe.com.br/wp-content/uploads/2017/04/Saraiva-cupom.png?fit=700%2C309" alt=""
           />
         </div>
-        <div
-          className="cardIconWrapper"
-        >
-          <img
-            className="cardIcon"
-            src={CartIcon}
-            alt="shopping cart"
-          />
-          <span
-            className="cartTotal"
-          >
-            {cartItems}
-          </span>
-        </div>
+        <Link to="/checkout">
+          <div
+            className="cardIconWrapper"
+            >
+            <img
+              className="cardIcon"
+              src={CartIcon}
+              alt="shopping cart"
+              />
+            <span
+              className="cartTotal"
+              >
+              {
+                cartItems > 9 ? '+9' : cartItems
+              }
+            </span>
+          </div>
+        </Link>
       </div>
     </div>
     <div class="navbar navList">

@@ -1,0 +1,59 @@
+.listContentWrapper {
+  width: 100%;
+}
+.list {
+  display: flex;
+  border: solid 1px #ebebeb;
+  background: #f7f7f7;
+  margin: 0 10px 10px 0px;
+  border-radius: 3px;
+  padding: 16px;
+  justify-content: space-around;
+  align-items: center;
+  width: 700px;
+  transition: border-color 0.3s ease 0s;
+}
+
+.list:hover {
+  border-color: #2c2c2c;
+}
+
+.imageCircleWrapper {
+  height: 100px;
+  width: 70px;
+  overflow: hidden;
+  background: white;
+}
+
+.imageItem {
+  width: 100%;
+  height: 100%;
+}
+
+.itemQuantity {
+  display: flex;
+  align-items: center;
+}
+
+.actionIcon {
+  display: block;
+  width: 18px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.quantityTotal {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.removeItem {
+  position: relative;
+  top: -40px;
+  right: -10px;
+}
+
+.removeItem > .actionIcon {
+  width: 10px;
+  cursor: pointer;
+}

@@ -17,12 +17,12 @@
 }
 
 .card > h2 {
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 .cardImageWrapper {
-  height: 221px;
-  width: 171px;
+  height: auto;
+  width: 130px;
   margin: auto;
   overflow: hidden;
 }
