@@ -14,7 +14,7 @@ const Card = ({
   onClick
 }) => {
   return (
-    <div class="card">
+    <div className="card">
       <div
         className="cardImageWrapper"
       >

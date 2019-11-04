@@ -43,7 +43,7 @@ const List = ({
           src={LessIcon}
           alt="less"
         />
-        <span class="quantityTotal">{quantity} un</span>
+        <span className="quantityTotal">{quantity} un</span>
         <img
           className="actionIcon"
           src={PlusIcon}

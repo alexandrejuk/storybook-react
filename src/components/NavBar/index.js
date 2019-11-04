@@ -10,10 +10,10 @@ const NavBar = ({
   cartItems,
 }) => (
   <Fragment>
-    <div class="navbar">
-      <div class="nav-wrapper">
+    <div className="navbar">
+      <div className="nav-wrapper">
         <Link to="/">
-          <div class="logo">
+          <div className="logo">
             <img 
               src="http://i2.wp.com/perfilwe.com.br/wp-content/uploads/2017/04/Saraiva-cupom.png?fit=700%2C309" alt=""
             />

@@ -29,7 +29,7 @@ const Payment = ({
       <div className="itemPrice">
       </div>
       <div className="itemQuantity">
-        <span class="quantityTotal">{quantity} un</span>
+        <span className="quantityTotal">{quantity} un</span>
       </div>
       <div className="itemAmount">
         <h5>subtotal</h5>
