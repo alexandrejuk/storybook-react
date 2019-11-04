@@ -89,3 +89,20 @@ li:hover {
   text-align: center;
   padding: 4px;
 }
+.actionNavBar {
+  display: flex;
+  align-items: center;
+}
+.loginSingUp {
+  margin: 0 50px;
+  color: #24282b;
+  text-decoration: none;
+}
+
+.loginSingUp {
+  display: flex;
+}
+.loginIcon {
+  width: 30px;
+  margin: 0 10px;
+}

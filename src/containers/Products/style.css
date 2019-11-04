@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+.slider {
+  width: 100%;
+  margin: 20px 0;
+}
 @media screen and (max-width: 414px) {
   .contentProductsMain {
     justify-content: center;
