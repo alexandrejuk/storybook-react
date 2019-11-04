@@ -6,10 +6,7 @@ import './style.css'
 const Card = ({
   id,
   title,
-  subtitle,
-  description,
   image,
-  content,
   price,
   onClick
 }) => {
@@ -27,7 +24,7 @@ const Card = ({
       <h3>{title}</h3>
       <p>Nigro,Thiago</p>
       <small>Vendido por Saravá</small>
-      <h2><strong>R$ {price}</strong></h2>
+      <h2><strong>R$ {price},00</strong></h2>
       <Button
         classStyle="btnDefault"
         onClick={() => onClick(id)}>

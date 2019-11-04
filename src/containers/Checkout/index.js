@@ -18,24 +18,42 @@ const Checkout = ({
   <Fragment>
     <h3>Meu carrinho</h3>
     <div className="checkoutContent">
-      <List
-        data={addedItems}
-        addItem={addCartItem}
-        decrementItem={decrementCartItem}
-        removeItem={removeCartItem}
-      />
+      { addedItems.length > 0 
+        ? <List
+          data={addedItems}
+          addItem={addCartItem}
+          decrementItem={decrementCartItem}
+          removeItem={removeCartItem}
+        />
+        : <h2>
+            Seu carrinho está vazio <br />
+            <a href="/#/">
+              Continuar navegando
+            </a>
+          </h2>
+      }
       <div className="checkoutShipping">
         <div className="amountTotalCart">
           <h5>Subtotal</h5>
-          <h5>R$ {totalAmount(addedItems)}</h5>
+          <h5>R$ {totalAmount(addedItems)},00</h5>
         </div>
         <div className="amountTotalShiping">
-          <h5>Entrega</h5>
-          <h5>R$ {shipping}</h5>
+          { addedItems.length > 0 
+            ? <Fragment>
+                <h5>Entrega</h5>
+                <h5>R$ {shipping},00</h5>
+              </Fragment>
+            : null
+          }
         </div>
         <div className="amountTotalGlobal">
-          <h4>TOTAL</h4>
-          <h4>R$ {totalAmount(addedItems) + shipping }</h4>
+        { addedItems.length > 0 
+            ? <Fragment>
+                <h4>TOTAL</h4>
+                <h4>R$ {totalAmount(addedItems) + shipping },00</h4>
+              </Fragment>
+            : null
+        }
         </div>
         <div>
           <a href="/#/">

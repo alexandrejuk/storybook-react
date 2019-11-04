@@ -53,7 +53,7 @@ const List = ({
       </div>
       <div className="itemAmount">
         <h5>subtotal</h5>
-        <h3>R$ {price*quantity}</h3>
+        <h3>R$ {price*quantity},00</h3>
       </div>
       <div className="removeItem">
         <img

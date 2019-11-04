@@ -4,6 +4,10 @@ import {
   Button,
 } from '../../components'
 import './style.css'
+
+const totalAmount = items => items.reduce((prev, curr) => prev + (curr.price * curr.quantity),0)
+const shipping = 30
+
 const Payment = ({
   addedItems,
 }) => {
@@ -24,7 +28,7 @@ const Payment = ({
       </div>
       <div className="itemTitle">
         <h3>{title}</h3>
-        <h3>R$ {price}</h3>
+        <h3>R$ {price},00</h3>
       </div>
       <div className="itemPrice">
       </div>
@@ -33,7 +37,7 @@ const Payment = ({
       </div>
       <div className="itemAmount">
         <h5>subtotal</h5>
-        <h3>R$ {price*quantity}</h3>
+        <h3>R$ {price*quantity},00</h3>
       </div>
     </div>
   )
@@ -62,8 +66,8 @@ const Payment = ({
         <div className="paymentCartItems">
           {map(itemCart, addedItems)}
           <div className="amountTotalGlobalPayment">
-            <h4>TOTAL</h4>
-            <h4>R$ 1000.00</h4>
+            <h4>TOTAL + FRETE</h4>
+            <h4>R$ {totalAmount(addedItems) + shipping},00</h4>
           </div>
         </div>
         <div className="paymentMethodCard">
@@ -117,7 +121,7 @@ const Payment = ({
           <h3 className="paymentMethodTitle">
             PAGUE COM BOLETO BANCÁRIO
           </h3>
-          <h4>R$ 1000,00</h4>
+          <h4>R$ {totalAmount(addedItems) + shipping},00</h4>
           <div>
             <p className="paymentMessage">
               Você poderá visualizar ou imprimir após a finalização do pedido. 
