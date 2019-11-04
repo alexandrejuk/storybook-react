@@ -25,7 +25,11 @@ const Products = ({
     />
   )
 
-  return map(productItem, products)
+  return (
+    <div className="contentProductsMain">
+      {map(productItem, products)}
+    </div>
+  )
 }
 
 export default Products

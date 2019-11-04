@@ -1,6 +1,7 @@
 .card {
-  max-width: 260px;
-  min-width: 260px;
+  flex: 1;
+  min-width: 230px;
+  max-width: 230px;
   height: 460px;
   background: #fff;
   padding: 16px;

@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
+
+import CartIcon from '../../assets/icons/cart.svg'
 import './style.css'
+
 const NavBar = ({
   cartItems,
 }) => (
@@ -11,7 +14,20 @@ const NavBar = ({
           <img 
             src="http://i2.wp.com/perfilwe.com.br/wp-content/uploads/2017/04/Saraiva-cupom.png?fit=700%2C309" alt=""
           />
-          <p>quantidade de items {cartItems}</p>
+        </div>
+        <div
+          className="cardIconWrapper"
+        >
+          <img
+            className="cardIcon"
+            src={CartIcon}
+            alt="shopping cart"
+          />
+          <span
+            className="cartTotal"
+          >
+            {cartItems}
+          </span>
         </div>
       </div>
     </div>
