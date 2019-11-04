@@ -1,0 +1,109 @@
+.paymentMethodsOption {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 3px;
+  border: solid 1px #ebebeb;
+  width: 700px;
+  margin-top: 15px;
+  flex: 2;
+}
+.paymentMethodTitle {
+  margin: 20px 0;
+  padding: 10px 0;
+  border-bottom: solid 1px #666;
+}
+.paymentFormGroup {
+  margin: 10px auto;
+
+}
+
+.paymentForm {
+  width: 100%;
+}
+.paymentLabel {
+  display: block;
+  color: #333;
+  font-size: .8em;
+  margin-bottom: 10px;
+}
+
+.paymentInput {
+  margin: 0;
+  padding: .8em;
+  border: 1px solid #bcbcbc;
+  outline: 0;
+  background-color: #f6f6f6;
+  color: #000;
+  font-size: 1em;
+  line-height: normal;
+  width: 240px;
+
+}
+
+.paymentInput:focus {
+  border-color: #000;
+}
+
+.paymentFormGroup.dateValid {
+  display: flex;
+}
+
+.paymentAction {
+  width: 270px;
+}
+
+.paymentMessage {
+  color: #333;
+  font-size: 0.8em;
+  margin: 20px 0;
+}
+
+.paymentInput.dateValidInput {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.paymentInput.securityCode {
+  width: 100px;
+}
+
+.listPayment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.paymentCartItems {
+  border: #f3eeee solid 1px;
+  padding: 16px;
+  border-radius: 3px;
+}
+.amountTotalGlobalPayment {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin-top: 15px;
+  font-weight: bold;
+  border-top: #f3eeee solid 1px;
+}
+
+.paymentOrder {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.paymentAddress {
+  flex: 1;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 3px;
+  border: solid 1px #ebebeb;
+  margin: 15px;
+  height: 200px;
+}
+
+.paymentAddress > p {
+  margin: 10px 0;
+}

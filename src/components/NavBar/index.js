@@ -39,9 +39,9 @@ const NavBar = ({
     <div className="navbar navList">
       <div className="nav-wrapper nav-white">
         <ul>
-          <li>LIVROS</li>
-          <li>LIVROS</li>
-          <li>LIVROS</li>
+          <li>Livros</li>
+          <li>Brinquedos</li>
+          <li>Games</li>
         </ul>
       </div>
     </div>
