@@ -3,9 +3,10 @@ import './style.css'
 const Button = ({
   onClick,
   children,
+  classStyle,
 }) => (
   <button
-    className="btnDefault"
+    className={`${classStyle}`}
     onClick={onClick}
   >
     {children}

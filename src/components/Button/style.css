@@ -12,3 +12,19 @@
   background: #fece02;
   border-color: #fece02;
 }
+
+.btnPrimary {
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #fece02;
+  border: 1px solid #fece02;
+  color: #000;
+  transition: opacity 0.3s ease 0s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.6;
+}

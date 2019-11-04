@@ -28,7 +28,9 @@ const Card = ({
       <p>Nigro,Thiago</p>
       <small>Vendido por Saravá</small>
       <h2><strong>R$ {price}</strong></h2>
-      <Button onClick={() => onClick(id)}>
+      <Button
+        classStyle="btnDefault"
+        onClick={() => onClick(id)}>
         Adicionar ao carrinho
       </Button>
     </div>

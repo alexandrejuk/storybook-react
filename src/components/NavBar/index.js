@@ -36,8 +36,8 @@ const NavBar = ({
         </Link>
       </div>
     </div>
-    <div class="navbar navList">
-      <div class="nav-wrapper nav-white">
+    <div className="navbar navList">
+      <div className="nav-wrapper nav-white">
         <ul>
           <li>LIVROS</li>
           <li>LIVROS</li>
