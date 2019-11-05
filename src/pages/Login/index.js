@@ -15,7 +15,10 @@ const Login = ({
     if (login) {
       return history.push('payment')
     }
-  }, [history])
+  }, [
+    login,
+    history
+  ])
 
   const handleChange = (name, value) => {
     setFormData({...formData, [name]: value })
