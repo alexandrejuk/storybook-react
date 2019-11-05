@@ -24,7 +24,7 @@ const NavBar = ({
             <div className="loginSingUp">
               { 
                 login
-                  ?  <h5>{login.user.fullName}</h5>
+                  ?  <h5>{login.fullName}</h5>
                   :
                     <Link to="login">
                       <img className="loginIcon" src={UserIcon} alt="icon login"/>

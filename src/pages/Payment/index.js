@@ -30,6 +30,7 @@ const Payment = ({
       removeCartItem={removeCartItem}
       addedItems={addedItems}
       history={history}
+      address={login.address}
     />
   )
 }

@@ -9,6 +9,7 @@ const totalAmount = items => items.reduce((prev, curr) => prev + (curr.price * c
 const shipping = 30
 
 const Payment = ({
+  address,
   addedItems,
 }) => {
   const itemCart = ({
@@ -52,10 +53,10 @@ const Payment = ({
         >
           ENDEREÇO DE ENTREGA
         </h3>
-        <p> Rua Bueno Vilela, 51 - Casa</p>
-        <p>Montanhão</p>
-        <p>São Bernardo do Campo - SP</p>
-        <p>09784-385</p>
+        <p>{address.street} {address.street_number}</p>
+        <p>{address.neighborhood}</p>
+        <p>{address.city} - {address.state}</p>
+        <p>{address.zipcode}</p>
       </div>
       <div className="paymentMethodsOption">
         <h3

@@ -1,8 +1,8 @@
 const LOGGED = 'LOGGED'
 const LOGGOUT = 'LOGGOUT'
 
-const logged = user => ({ type: LOGGED, user })
-const loggout = id => ({ type: LOGGOUT })
+const logged = payload => ({ type: LOGGED, payload })
+const loggout = () => ({ type: LOGGOUT })
 
 const actionsType = {
   LOGGED,
