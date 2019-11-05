@@ -13,6 +13,7 @@ const Checkout = ({
   addCartItem,
   decrementCartItem,
   removeCartItem,
+  login,
   history,
 }) => (
   <Fragment>
@@ -61,7 +62,12 @@ const Checkout = ({
           </a>
           <Button
             classStyle="btnPrimary"
-            onClick={() => history.push('payment')}
+            onClick={() => {
+              if (!login) {
+                return history.push('login')              
+              }
+              return history.push('payment')
+            }}
           >
             FINALIZAR PEDIDO
           </Button>

@@ -14,6 +14,7 @@ const Checkout = ({
   addCartItem,
   decrementCartItem,
   removeCartItem,
+  login,
   history,
 }) => {
   return (
@@ -23,14 +24,16 @@ const Checkout = ({
       decrementCartItem={decrementCartItem}
       history={history}
       removeCartItem={removeCartItem}
+      login={login}
     />
   )
 }
 
 const mapStateToProps = (state)=>{
-  const { addedItems } = state
+  const { login, products: { addedItems } } = state
   return {
-    addedItems
+    addedItems,
+    login,
   }
 }
 

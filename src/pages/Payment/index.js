@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import {
@@ -10,11 +10,19 @@ import PaymentContainer from '../../containers/Payment'
 
 const Payment = ({
   addedItems,
+  login,
   addCartItem,
   decrementCartItem,
   removeCartItem,
   history,
 }) => {
+  
+  useEffect(() => {
+    if (!login) {
+      return history.push('login')
+    }
+  }, [history]) 
+
   return (
     <PaymentContainer
       addCartItem={addCartItem}
@@ -27,10 +35,11 @@ const Payment = ({
 }
 
 
-const mapStateToProps = (state)=>{
-  const { addedItems } = state
+const mapStateToProps = (state) => {
+  const { login, products: { addedItems } } = state
   return {
-    addedItems
+    addedItems,
+    login,
   }
 }
 

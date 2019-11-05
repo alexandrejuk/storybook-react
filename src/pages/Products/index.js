@@ -16,8 +16,8 @@ const Products = ({
   )
 }
 
-const mapStateToProps = (state)=>{
-  const { items } = state
+const mapStateToProps = (state)=> {
+  const { products: { items } } = state
   return {
     items
   }

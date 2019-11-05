@@ -12,7 +12,6 @@ const Login = ({
     handleChange(name, value)
   }
 
-
   return (
     <div>
     <h2>Faça o login ou cadastre-se</h2>

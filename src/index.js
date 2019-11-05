@@ -1,15 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { HashRouter } from 'react-router-dom'
-import { createStore } from 'redux' 
+import { createStore, combineReducers } from 'redux' 
 import { Provider } from 'react-redux'
 import './index.css'
 import App from './App'
 import cartReducer from './components/reducers/cart'
-import * as serviceWorker from './serviceWorker'
+import loginReducer from './components/reducers/login'
+
+const rootReducers = combineReducers({
+  login: loginReducer,
+  products: cartReducer,
+})
 
 const store = createStore(
-  cartReducer,
+  rootReducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 )
 
@@ -24,5 +29,3 @@ ReactDOM.render(
   </Provider>, 
   document.getElementById('root')
 )
-
-serviceWorker.unregister()
