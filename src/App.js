@@ -10,6 +10,7 @@ import Products from './pages/Products'
 import Checkout from './pages/Checkout'
 import Payment from './pages/Payment'
 import Login from './pages/Login'
+import Order from './pages/Order'
 
 import './style.css'
 
@@ -31,6 +32,10 @@ const App = () => {
           <Route
             path="/payment"
             component={Payment}
+          />
+          <Route
+            path="/order"
+            component={Order}
           />
           <Route
             path="/login"

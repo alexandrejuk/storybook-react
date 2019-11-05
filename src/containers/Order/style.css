@@ -1,0 +1,10 @@
+.listOrder {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background: #fff;
+  border: 3px;
+  border: #f3eeee solid 1px;
+}
