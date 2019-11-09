@@ -133,6 +133,7 @@ const Login = ({
             <input
               className="loginInput"
               name="password"
+              type="password"
              onChange={handleChange}
             />
           </div>
