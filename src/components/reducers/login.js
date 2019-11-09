@@ -7,19 +7,7 @@ const {
   LOGGOUT,
 } = actionsType
 
-const initialState = {
-  username: 'Alexandre',
-  fullName: 'Alexandre S. Soares',
-  address: {
-    street: 'Rua Bueno Vilela',
-    street_number: '51',
-    city: 'São Bernardo do Campo',
-    state: 'SP',
-    zipcode: '09784385',
-    neighborhood: 'Montanhão',
-  },
-  phone: '11987654321',
-}
+const initialState = null
 
 const loginReducer = (state = initialState, action) => {
   switch (action.type) {

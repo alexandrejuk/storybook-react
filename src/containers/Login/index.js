@@ -24,7 +24,7 @@ const Login = ({
               usuário
             </label>
             <input
-              name='usernarme'
+              name='username'
               onChange={handleChange}
               className="loginInput"
             />
