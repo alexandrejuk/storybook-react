@@ -10,6 +10,7 @@ const Products = ({
   const productItem = ({
     id,
     title,
+    author,
     image,
     description,
     price,
@@ -19,6 +20,7 @@ const Products = ({
       id={id}
       description={description}
       title={title}
+      author={author}
       image={image}
       price={price}
       onClick={addCartItem}

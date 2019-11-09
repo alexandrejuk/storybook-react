@@ -1,5 +1,5 @@
 body {
-  background: #EFEFEF;  
+  background: #EFEFEF;
 }
 
 .navbar {
@@ -105,4 +105,15 @@ li:hover {
 .loginIcon {
   width: 30px;
   margin: 0 10px;
+}
+
+.loggout-btn  {
+  margin: 0 0 0 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.loggout-btn:hover {
+  text-decoration: underline;
 }

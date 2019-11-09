@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-
+import { loggout } from '../actions/login'
 import CartIcon from '../../assets/icons/cart.svg'
 import UserIcon from '../../assets/icons/user.svg'
 import './style.css'
 
 const NavBar = ({
   logged,
+  loggoutUser,
   cartItems,
 }) => (
   <Fragment>
@@ -24,7 +25,13 @@ const NavBar = ({
             <div className="loginSingUp">
               {
                 logged
-                  ?  <h5>{logged.fullName}</h5>
+                  ?
+                    <h5>{logged.fullName}
+                      <button className="loggout-btn"
+                        onClick={loggoutUser}>
+                        Sair
+                      </button>
+                    </h5>
                   :
                     <Link to="login">
                       <img className="loginIcon" src={UserIcon} alt="icon login"/>
@@ -75,4 +82,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(NavBar)
+const mapDispatchToProps= (dispatch)=>{
+  return {
+    loggoutUser: () => dispatch(loggout()),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar)

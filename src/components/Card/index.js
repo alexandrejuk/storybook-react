@@ -6,6 +6,7 @@ import './style.css'
 const Card = ({
   id,
   title,
+  author,
   image,
   price,
   onClick
@@ -22,7 +23,7 @@ const Card = ({
         />
       </div>
       <h3>{title}</h3>
-      <p>Nigro,Thiago</p>
+      <p>{author}</p>
       <small>Vendido por Saravá</small>
       <h2><strong>R$ {price},00</strong></h2>
       <Button

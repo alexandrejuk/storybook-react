@@ -23,7 +23,7 @@ const Order = ({
                     />
                   </div>
                   <div className="itemTitle">
-                    <h3>Addidas</h3>
+                    <h3>{item.title}</h3>
                     <h3>R$ {item.price},00</h3>
                   </div>
                   <div className="itemTitle">
