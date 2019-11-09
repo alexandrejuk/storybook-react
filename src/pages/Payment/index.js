@@ -1,54 +1,90 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import {
-  addItemToCard,
-  decrementItem,
-  removeItemToCart,
-} from '../../components/actions/cart'
+import { resetCart } from '../../components/actions/cart'
+import { addOrder } from '../../components/actions/order'
 import PaymentContainer from '../../containers/Payment'
 
 const Payment = ({
   addedItems,
-  login,
-  addCartItem,
-  decrementCartItem,
-  removeCartItem,
+  logged,
+  newOrder,
+  resetCartItems,
   history,
 }) => {
-  
+
+  const [card, setCard] = useState({})
+
   useEffect(() => {
-    if (!login) {
+    if (!logged) {
       return history.push('login')
     }
-  }, [history]) 
+    if (addedItems.length === 0) {
+      return history.push('/')
+    }
+  }, [history])
+
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setCard({...card, [name]: value })
+  }
+
+
+  const finishOrderBoleto = () => {
+    const order = {
+      user: logged,
+      items: addedItems,
+      paymentMethod: 'Boleto',
+      date: new Date(),
+      status: 'aguardando pagamento',
+    }
+    newOrder(order)
+    resetCartItems()
+    return history.push('order')
+  }
+
+  const finishCard = () => {
+    const order = {
+      card,
+      user: logged,
+      items: addedItems,
+      paymentMethod: 'Cartão de crédito',
+      date: new Date(),
+      status: 'pagamento confirmado',
+    }
+    newOrder(order)
+    resetCartItems()
+    return history.push('order')
+  }
 
   return (
     <PaymentContainer
-      addCartItem={addCartItem}
-      decrementCartItem={decrementCartItem}
-      removeCartItem={removeCartItem}
+      resetCartItems={resetCartItems}
+      finishOrderBoleto={finishOrderBoleto}
+      finishCard={finishCard}
       addedItems={addedItems}
-      history={history}
-      address={login.address}
+      handleChange={handleChange}
+      address={logged}
     />
   )
 }
 
-
 const mapStateToProps = (state) => {
-  const { login, products: { addedItems } } = state
+  const {
+    login: { logged },
+    products: { addedItems },
+  } = state
   return {
     addedItems,
-    login,
+    logged,
   }
 }
 
 const mapDispatchToProps= (dispatch)=>{
   return {
-    addCartItem: id => dispatch(addItemToCard(id)),
-    decrementCartItem: id => dispatch(decrementItem(id)),
-    removeCartItem: id => dispatch(removeItemToCart(id)),
+    newOrder: payload => dispatch(addOrder(payload)),
+    resetCartItems: () => dispatch(resetCart()),
   }
 }
 

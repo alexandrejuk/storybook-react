@@ -7,7 +7,7 @@ import UserIcon from '../../assets/icons/user.svg'
 import './style.css'
 
 const NavBar = ({
-  login,
+  logged,
   cartItems,
 }) => (
   <Fragment>
@@ -15,16 +15,16 @@ const NavBar = ({
       <div className="nav-wrapper">
         <Link to="/">
           <div className="logo">
-            <img 
+            <img
               src="http://i2.wp.com/perfilwe.com.br/wp-content/uploads/2017/04/Saraiva-cupom.png?fit=700%2C309" alt=""
             />
           </div>
         </Link>
        <div className="actionNavBar">
             <div className="loginSingUp">
-              { 
-                login
-                  ?  <h5>{login.fullName}</h5>
+              {
+                logged
+                  ?  <h5>{logged.fullName}</h5>
                   :
                     <Link to="login">
                       <img className="loginIcon" src={UserIcon} alt="icon login"/>
@@ -67,11 +67,11 @@ const NavBar = ({
 )
 
 const mapStateToProps = (state) => {
-  const { login, products: { addedItems } } = state
+  const { login: { logged }, products: { addedItems } } = state
   const cartItems = addedItems.reduce((prev, curr) => (prev + curr.quantity),0)
   return {
     cartItems,
-    login,
+    logged,
   }
 }
 

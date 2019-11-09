@@ -12,6 +12,7 @@ const {
   DECREMENT_ITEM,
   GET_ALL_PRODUCTS,
   REMOVE_ITEM,
+  RESET_CART,
 } = actionsType
 
 const initialState = {
@@ -76,6 +77,11 @@ const cartReducer= (state = initialState, action) => {
           ...state,
           items: action.products,
         }
+        case RESET_CART:
+          return {
+            ...state,
+            addedItems: [],
+          }
     default:
       return state
   }

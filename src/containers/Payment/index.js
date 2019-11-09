@@ -11,6 +11,9 @@ const shipping = 30
 const Payment = ({
   address,
   addedItems,
+  handleChange,
+  finishOrderBoleto,
+  finishCard,
 }) => {
   const itemCart = ({
     id,
@@ -53,10 +56,10 @@ const Payment = ({
         >
           ENDEREÇO DE ENTREGA
         </h3>
-        <p>{address.street} {address.street_number}</p>
-        <p>{address.neighborhood}</p>
-        <p>{address.city} - {address.state}</p>
-        <p>{address.zipcode}</p>
+        <p>{address && address.street} {address && address.street_number}</p>
+        <p>{address && address.neighborhood}</p>
+        <p>{address && address.city} - {address && address.state}</p>
+        <p>{address && address.zipcode}</p>
       </div>
       <div className="paymentMethodsOption">
         <h3
@@ -77,46 +80,71 @@ const Payment = ({
           >
             PAGUE COM CARTÃO DE CRÉDITO
           </h3>
-          <form className="paymentForm">
+          <div className="paymentForm">
             <div className="paymentFormGroup">
               <label className="paymentLabel">
                 Número do Cartão
               </label>
-              <input className="paymentInput" />
+              <input
+                className="paymentInput"
+                onChange={handleChange}
+                name="cardNumber"
+              />
             </div>
             <div className="paymentFormGroup">
               <label className="paymentLabel">
                 Nome do titular (como está gravado no Cartão)
               </label>
-              <input className="paymentInput" />
+              <input
+                className="paymentInput"
+                onChange={handleChange}
+                name="cardName"
+              />
             </div>
             <div className="paymentFormGroup">
               <label className="paymentLabel dateValid">
                 Data de Validade
               </label>
-              <input className="paymentInput dateValidInput" />
-              <input className="paymentInput dateValidInput" />
+              <input
+                className="paymentInput dateValidInput"
+                onChange={handleChange}
+                name="cardMonth"
+              />
+              <input
+                className="paymentInput dateValidInput"
+                onChange={handleChange}
+                name="cardYear"
+              />
             </div>
             <div className="paymentFormGroup">
               <label className="paymentLabel">
                 Código de Segurança
               </label>
-              <input className="paymentInput securityCode" />
+              <input
+                className="paymentInput securityCode"
+                onChange={handleChange}
+                name="cardCVV"
+              />
             </div>
             <div className="paymentFormGroup">
               <label className="paymentLabel">
                 Opções de Parcelamento
               </label>
-              <input className="paymentInput" />
+              <input
+                className="paymentInput"
+                onChange={handleChange}
+                name="installment"
+              />
             </div>
             <div className="paymentAction">
               <Button
+                onClick={finishCard}
                 classStyle="btnPrimary"
               >
                 Concluir com cartão de crédito
               </Button>
             </div>
-          </form>
+          </div>
         </div>
         <div className="paymentMethodCard">
           <h3 className="paymentMethodTitle">
@@ -125,12 +153,13 @@ const Payment = ({
           <h4>R$ {totalAmount(addedItems) + shipping},00</h4>
           <div>
             <p className="paymentMessage">
-              Você poderá visualizar ou imprimir após a finalização do pedido. 
+              Você poderá visualizar ou imprimir após a finalização do pedido.
               A data de vencimento é de 2 dias corridos após a conclusão do pedido.
               Após esta data, ele perderá a validade.
             </p>
             <div className="paymentAction">
               <Button
+                onClick={finishOrderBoleto}
                 classStyle="btnPrimary"
               >
                 Concluir com boleto bancário
